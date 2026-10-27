@@ -1,0 +1,41 @@
+source:
+  engine:
+  file_path:
+  sheet_name:
+  conn_id:
+  database:
+  schema_name:
+  table:
+
+preprocess: 
+  module:
+
+target:
+  engine:
+  file_path:
+  sheet_name:
+  conn_id:
+  database:
+  schema_name:
+  table:
+
+postprocess: 
+  engine:
+  conn_id:
+  database:
+  sql_file_path:
+
+dag:
+  dag_id:
+  active:
+  schedule:
+  owner:
+  tags:
+  description:
+
+# dag_id -> Унаследует обработанный target.target_name
+# active -> True (1 - активен\включён)
+# schedule -> "0 0 * * *" (Ежедневный запуск в 3:00 по мск)
+# owner -> airflow (стандартный владелец - не рекомендуется)
+# tags -> ["nextcloud", "mssql"] (базовые достаточные тэги для фабрики)
+# description -> Унаследует сырой dag_id или target.target_name
